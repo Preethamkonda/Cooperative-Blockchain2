@@ -1,0 +1,4 @@
+alert udp any any -> 10.0.0.2 80 (msg:"DDoS_UDP"; threshold: type limit, track by_src, count 1, seconds 60; sid:1000004;)
+alert ftp any any -> 10.0.0.3 21 (msg:"FTP-Patator_FTP"; threshold: type limit, track by_src, count 1, seconds 60; sid:1000006;)
+alert http any any -> 10.0.0.4 2602 (msg:"PortScan_HTTP"; threshold: type limit, track by_src, count 1, seconds 60; sid:1000008;)
+alert http any any -> 10.0.0.5 5631 (msg:"PortScan_HTTP"; threshold: type limit, track by_src, count 1, seconds 60; sid:1000009;)
